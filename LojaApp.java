@@ -1,17 +1,45 @@
+import java.util.Scanner;
+
 public class LojaApp {
-   public static void main(String[]args){
-   
-   Produto p1 = new Produto(1, "Vestido Flor", 89.90, 3);
-   Produto p2 = new Produto(2, "Vestido Borboleta", 129.90, 2);
+   static void main(String[] args){
+      Scanner leitor = new Scanner(System.in);
 
-   Cliente c1 = new Cliente("joão", "123.456.789-10");
+      int opcao = 0;
 
-   System.out.println("estoque antes da venda" + p1);
-  
-   Venda venda1 = new Venda(c1);
-   venda1.adicionarProduto(p1, 2);
-   venda1.finalizarVenda();
+      while (opcao != 4) {
+         System.out.println("+--------------------------------------+");
+         System.out.println("+         Loja Mundo Bella             +");
+         System.out.println("+--------------------------------------+");
+         System.out.println();
+         System.out.println("[1] Vendas.");
+         System.out.println("[2] Cadastrar um cliente.");
+         System.out.println("[3] Estoque.");
+         System.out.println("[4] Sair...");
+         System.out.println();
+         System.out.print("Escolha: ");
+         opcao = leitor.nextInt();
+         leitor.nextLine();
 
-   System.out.println("Estoque pós venda: " + p1); 
+         switch (opcao){
+            case 1:
+
+               int opcao2 = 0;
+
+               System.out.println("+--------------------------------------+");
+               System.out.println("+           Menu de vendas:            +");
+               System.out.println("+--------------------------------------+");
+               System.out.println();
+               System.out.println("[1] Realizar uma venda");
+               System.out.println("[2] Historico de vendas");
+
+               opcao2 = leitor.nextInt();
+               leitor.nextLine();
+
+         }
+
+      }
+
+      System.out.println("O Sistema esta encerrando...");
+
   }
 }
