@@ -1,3 +1,5 @@
+package models;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +24,7 @@ public void adicionarProduto(Produto p, int quantidade){
 
 public void finalizarVenda() {
    System.out.println("-----Comprovante de venda-----");
-   System.out.println("Cliente: " + cliente.getNome());
+   System.out.println("models.Cliente: " + cliente.getNome());
    System.out.println("Data " + dataHora);
    System.out.println("Itens comprados: " + produtos.size());
    System.out.println("Total a Pagar: R$ " + total);
